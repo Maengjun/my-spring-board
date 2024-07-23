@@ -8,7 +8,7 @@ import java.util.List;
 @Mapper
 public interface BoardMapper {
 
-    @Select("SELECT b.id as id, title, content, created_at, u.username FROM Board as b inner join users as u on b.user_id = u.id")
+    @Select("SELECT b.id as id, title, content, created_at, u.username FROM board as b inner join users as u on b.user_id = u.id")
     List<Board> findAll();
 
     @Select("SELECT * FROM board where id = #{id}")

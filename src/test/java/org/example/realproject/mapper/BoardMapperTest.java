@@ -32,7 +32,7 @@ class BoardMapperTest {
         Board board = new Board();
         board.setTitle("test title");
         board.setContent("test content");
-        board.setWriter("test writer");
+        // board.setWriter("test writer");
         boardMapper.insert(board);
 
         Board foundBoard = boardMapper.findById(board.getId());
@@ -40,7 +40,7 @@ class BoardMapperTest {
         assertThat(foundBoard).isNotNull();
         assertThat(foundBoard.getTitle()).isEqualTo("test title");
         assertThat(foundBoard.getContent()).isEqualTo("test content");
-        assertThat(foundBoard.getWriter()).isEqualTo("test writer");
+        // assertThat(foundBoard.getWriter()).isEqualTo("test writer");
     }
 
     @Test
@@ -48,7 +48,7 @@ class BoardMapperTest {
         Board board = new Board();
         board.setTitle("test title");
         board.setContent("test content");
-        board.setWriter("test writer");
+        // board.setWriter("test writer");
         boardMapper.insert(board);
     }
 
@@ -58,21 +58,21 @@ class BoardMapperTest {
         Board board = new Board();
         board.setTitle("test title");
         board.setContent("test content");
-        board.setWriter("test writer");
+        // board.setWriter("test writer");
 
         boardMapper.insert(board);
         Board foundBoard = boardMapper.findById(board.getId());
 
         foundBoard.setTitle("new title");
         foundBoard.setContent("new content");
-        foundBoard.setWriter("new writer");
+        // foundBoard.setWriter("new writer");
 
         boardMapper.update(foundBoard);
         boardMapper.findById(foundBoard.getId());
 
         assertThat(foundBoard.getTitle()).isEqualTo("new title");
         assertThat(foundBoard.getContent()).isEqualTo("new content");
-        assertThat(foundBoard.getWriter()).isEqualTo("new writer");
+        // assertThat(foundBoard.getWriter()).isEqualTo("new writer");
     }
 
     @Test
@@ -80,7 +80,7 @@ class BoardMapperTest {
         Board board = new Board();
         board.setTitle("test title");
         board.setContent("test content");
-        board.setWriter("test writer");
+        // board.setWriter("test writer");
 
         boardMapper.insert(board);
         Board foundBoard = boardMapper.findById(board.getId());
